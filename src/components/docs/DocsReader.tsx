@@ -312,7 +312,6 @@ export function DocsReader({ document }: { document: KnowledgeDocument }) {
       <div className="mb-8 space-y-4">
         <div className="flex flex-wrap gap-2">
           {document.type ? <Badge variant="secondary">{document.type}</Badge> : null}
-          <Badge variant="outline">Read-only documentation</Badge>
         </div>
         <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
           {document.title}
