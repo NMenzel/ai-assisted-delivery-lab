@@ -119,8 +119,8 @@ function SidebarContent({
     : [];
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col">
-      <div className="shrink-0 border-b border-border bg-card pb-4">
+    <div className="flex min-h-0 w-full min-w-0 flex-1 flex-col">
+      <div className="w-full min-w-0 shrink-0 border-b border-border bg-card pb-4">
         {showHeading ? (
           <div className="mb-4">
             <p className="text-sm font-semibold">Research Library</p>
@@ -129,7 +129,7 @@ function SidebarContent({
             </p>
           </div>
         ) : null}
-        <label className="relative block">
+        <label className="relative block w-full min-w-0">
           <span className="sr-only">Search documents</span>
           <Search
             className="pointer-events-none absolute left-3 top-2.5 size-4 text-muted-foreground"
@@ -191,7 +191,7 @@ export function DocsSidebar({
   return (
     <>
       <aside className="hidden lg:block">
-        <div className="sticky top-20 flex max-h-[calc(100vh-6rem)] overflow-hidden rounded-lg border border-border bg-card/70 p-4">
+        <div className="sticky top-20 flex max-h-[calc(100vh-6rem)] w-full min-w-0 flex-col overflow-hidden rounded-lg border border-border bg-card/70 p-4">
           <SidebarContent
             tree={tree}
             activeSlug={activeSlug}
