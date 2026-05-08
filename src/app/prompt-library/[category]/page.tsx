@@ -59,8 +59,8 @@ export default async function PromptCategoryPage({
       description={prompt.purpose}
       cta={{ label: "Back to prompt library", href: "/prompt-library" }}
     >
-      <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="space-y-6">
+      <div className="grid min-w-0 gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="min-w-0 space-y-6">
           <Card>
             <CardHeader>
               <CardTitle>When to use</CardTitle>
@@ -81,7 +81,7 @@ export default async function PromptCategoryPage({
           <ChecklistCard title="Failure modes" items={prompt.failureModes} />
         </div>
 
-        <Card>
+        <Card className="min-w-0">
           <CardHeader>
             <CardTitle>Prompt</CardTitle>
             <CardDescription>
@@ -89,9 +89,9 @@ export default async function PromptCategoryPage({
               the tool and data-processing setup explicitly allow it.
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <pre className="overflow-x-auto rounded-lg border border-border bg-secondary p-4 text-sm leading-6 text-secondary-foreground">
-              <code>{prompt.prompt}</code>
+          <CardContent className="min-w-0">
+            <pre className="max-w-full overflow-x-auto whitespace-pre-wrap break-words rounded-lg border border-border bg-secondary p-4 text-sm leading-6 text-secondary-foreground">
+              <code className="break-words">{prompt.prompt}</code>
             </pre>
           </CardContent>
         </Card>

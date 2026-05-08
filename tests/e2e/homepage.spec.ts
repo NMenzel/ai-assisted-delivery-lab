@@ -23,3 +23,22 @@ test("primary navigation reaches the prompt library", async ({ page }) => {
     }),
   ).toBeVisible();
 });
+
+test("prompt detail page does not create horizontal page overflow", async ({
+  page,
+}) => {
+  await page.goto("/prompt-library/coding");
+
+  await expect(
+    page.getByRole("heading", {
+      level: 1,
+      name: "Small Feature Implementation",
+    }),
+  ).toBeVisible();
+
+  const hasHorizontalOverflow = await page.evaluate(
+    () => document.documentElement.scrollWidth > window.innerWidth,
+  );
+
+  expect(hasHorizontalOverflow).toBe(false);
+});
