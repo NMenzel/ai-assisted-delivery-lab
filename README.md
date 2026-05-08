@@ -1,42 +1,130 @@
-# Next.js Production Starter
+# AI-Assisted Delivery Lab
 
-A production-oriented Next.js starter focused on maintainable architecture, accessibility, shadcn/ui components, testing, CI/CD quality gates, and AI-assisted engineering workflows with human review.
+A production-oriented framework for using AI in software delivery without weakening engineering accountability.
 
-This starter is designed as a reusable foundation for frontend projects where code quality, accessibility, and long-term maintainability matter.
+This project demonstrates how I structure AI-assisted software delivery as a senior engineer: with clear context, reusable prompts, human review checkpoints, secure tool boundaries, accessibility awareness, and measurable quality controls.
 
-## Why this starter exists
+## What This Is
 
-Many starter projects optimize for visual novelty or speed of scaffolding. This repository optimizes for a different goal: a clean, production-minded baseline that can grow with real project requirements.
+AI-Assisted Delivery Lab is a public portfolio project built on a production-minded Next.js starter. It is not a vibe-coding demo or a prompt dump. It is a structured engineering system for using AI responsibly across planning, implementation support, review, documentation, security analysis, accessibility workflows, and delivery evaluation.
 
-The focus is on a stable engineering foundation:
+The app and repository documentation are designed for engineering managers, tech leads, recruiters, AI enablement teams, and product teams adopting AI-assisted workflows.
 
-- readable code and clear boundaries
-- accessible component primitives
-- explicit testing layers
-- CI quality gates
-- security-conscious defaults
-- source-based UI components that remain easy to audit and customize
+## Why This Project Exists
 
-## Engineering principles
+AI can improve software delivery only when it is governed by strong engineering judgment, secure workflows, clear context, human review, and measurable quality controls.
 
-This starter is built around:
+This project makes that operating model concrete by showing:
 
-- Type-safe application development
-- Small, composable components
-- Clear separation of concerns
-- Accessibility by default
-- Radix/shadcn-based UI primitives
-- Automated quality gates
-- Testable UI behavior
-- Maintainable folder structure
-- Security-conscious defaults
-- AI-assisted development with human review
+- where AI is allowed to assist
+- where humans must decide
+- how prompts are governed
+- how AI-generated code is reviewed
+- how context is managed
+- how security and privacy risks are controlled
+- how accessibility workflows remain human-reviewed
+- how delivery quality is measured over time
 
-## Tech stack
+## What It Demonstrates
+
+- Responsible AI usage policies
+- Prompt-library governance
+- AI-assisted PR review discipline
+- Context engineering templates
+- Security and privacy controls
+- Accessibility-aware workflows
+- Token-optimization guidance
+- Human-in-the-loop approval checkpoints
+- Workflow evaluation metrics
+- Production-minded frontend delivery
+
+## Core Modules
+
+- Operating model
+- Responsible AI policy
+- Prompt library
+- AI PR review guidelines
+- Context engineering
+- Security threat model
+- Token optimization
+- Evaluation framework
+- Accessibility AI workflow
+- Example delivery workflows
+
+## Example Workflow
+
+The repository includes an end-to-end example called Accessible Button Component Delivery. It shows:
+
+- human requirement definition
+- AI planning prompt
+- AI implementation prompt
+- human architecture review
+- code review checklist
+- accessibility checks
+- test checklist
+- final PR summary
+- human sign-off
+
+## Responsible AI Principles
+
+- AI can propose, draft, summarize, and accelerate.
+- Humans remain accountable for architecture, security, compliance, customer impact, and production approval.
+- Confidential customer data, secrets, credentials, private keys, proprietary code, and sensitive business information must not be shared with AI tools unless the tool, contract, and data-processing setup explicitly allow it.
+- AI-generated outputs require review for correctness, maintainability, accessibility, security, and architectural fit.
+- The project uses source-informed and expert-review-ready language. It does not claim certification or expert approval.
+
+## Human-In-The-Loop Model
+
+AI assistance is treated as a reviewed contribution, not an autonomous production authority.
+
+Key checkpoints:
+
+- requirement approval
+- context approval
+- architecture review
+- implementation review
+- security and privacy review
+- accessibility review
+- test evidence review
+- production or release approval
+
+## Security And Privacy Guardrails
+
+The project documents controls for:
+
+- prompt injection
+- secrets leakage
+- customer data exposure
+- insecure tool/plugin design
+- excessive agent permissions
+- repository write access risk
+- dependency manipulation
+- generated vulnerable code
+- fake citations and unverifiable claims
+- destructive action approval
+
+## Evaluation Framework
+
+Workflow quality is scored using practical measures:
+
+- code quality
+- review quality
+- bug detection
+- security issue detection
+- accessibility issue detection
+- documentation quality
+- token efficiency
+- developer time saved
+- hallucination rate
+- human correction rate
+- rework rate
+
+## Tech Stack
 
 - Next.js App Router
 - TypeScript
 - Tailwind CSS
+- Radix UI / shadcn-style source components
 - pnpm
 - ESLint
 - Prettier
@@ -45,33 +133,35 @@ This starter is built around:
 - Playwright
 - GitHub Actions
 
-## Component foundation
+## Running Locally
 
-This starter uses shadcn/ui as a source-based component foundation and Radix UI primitives where accessible behavior is required.
+```bash
+pnpm install
+pnpm dev
+```
 
-The goal is not to hide complexity behind a black-box UI library. The goal is to start with accessible, customizable primitives that can be reviewed, tested, and adapted to project needs.
+Open `http://localhost:3000`.
 
-The initial baseline includes:
+## Available Scripts
 
-- `Button`
-- `Card`
-- `Badge`
-- `Separator`
-- `Container` for layout composition
+```bash
+pnpm lint
+pnpm typecheck
+pnpm test:run
+pnpm test:e2e
+pnpm format:check
+pnpm build
+```
 
-## Repository structure
+## Project Structure
 
 ```txt
 .
-├─ .github/workflows/ci.yml
-├─ components.json
 ├─ docs/
 ├─ src/
 │  ├─ app/
 │  ├─ components/
-│  │  ├─ layout/
-│  │  └─ ui/
-│  ├─ features/
+│  ├─ content/
 │  ├─ lib/
 │  ├─ styles/
 │  └─ types/
@@ -81,92 +171,10 @@ The initial baseline includes:
 └─ vitest.setup.ts
 ```
 
-## Quality gates
+## Portfolio Positioning
 
-The baseline quality gates are:
+This project demonstrates how I structure AI-assisted software delivery as a senior engineer: with clear context, reusable prompts, human review checkpoints, secure tool boundaries, accessibility awareness, and measurable quality controls.
 
-- ESLint for static analysis
-- TypeScript `--noEmit` type checking
-- Vitest component tests
-- Playwright end-to-end coverage for the homepage entry flow
-- production build verification
-- GitHub Actions CI on push to `main` and on pull requests
+## Disclaimer
 
-## Accessibility baseline
-
-This starter treats accessibility as a default engineering concern, not a later enhancement.
-
-- semantic HTML comes before ARIA
-- visible focus styles are preserved
-- Radix and shadcn accessibility behavior should not be broken during customization
-- keyboard navigation should work for important flows
-- headings, buttons, and landmarks should remain meaningful and predictable
-
-See [docs/accessibility.md](docs/accessibility.md) for the full baseline.
-
-## AI-assisted development principle
-
-AI can accelerate implementation and review workflows, but it does not replace engineering accountability.
-
-The working rule for this repository is:
-
-> AI can accelerate development, but it does not remove the need for engineering discipline.
-
-See [docs/ai-assisted-development.md](docs/ai-assisted-development.md) for prompt guidance, review expectations, and safety constraints.
-
-## Getting started
-
-```bash
-pnpm install
-pnpm dev
-```
-
-Open `http://localhost:3000`.
-
-## Available scripts
-
-```json
-{
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "eslint .",
-  "typecheck": "tsc --noEmit",
-  "test": "vitest",
-  "test:run": "vitest run",
-  "test:coverage": "vitest run --coverage",
-  "test:e2e": "playwright test",
-  "format": "prettier --write .",
-  "format:check": "prettier --check ."
-}
-```
-
-## Testing
-
-- `pnpm test:run` runs the Vitest suite.
-- `pnpm test:e2e` runs the Playwright homepage test.
-- `pnpm test:coverage` collects unit test coverage with the V8 provider.
-
-The intended testing pyramid is:
-
-- unit and component tests for reusable logic and UI behavior
-- E2E tests for full-page flows and async integration behavior
-
-## CI/CD
-
-GitHub Actions runs the core verification pipeline:
-
-- install dependencies
-- lint
-- typecheck
-- unit tests
-- production build
-
-The default CI stays lean by not running Playwright browsers on every push. E2E is configured locally and can be added to CI once the project needs that extra gate.
-
-## Future improvements
-
-- add more shadcn/ui primitives only when product requirements justify them
-- add visual regression testing if the project surface area grows
-- introduce environment validation for projects that depend on runtime configuration
-- add Storybook or a component workshop only when the component surface area becomes large enough to justify the maintenance cost
+This project is source-informed and prepared for expert review. It does not claim legal, compliance, security, or accessibility certification.
