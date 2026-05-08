@@ -24,7 +24,7 @@ export function DocsLayout({
 
   return (
     <div className="min-h-[calc(100vh-3.5rem)] bg-background/60">
-      <div className="grid gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[18rem_minmax(0,1fr)] xl:grid-cols-[18rem_minmax(0,1fr)_17rem]">
+      <div className="grid gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[22rem_minmax(0,1fr)] xl:grid-cols-[22rem_minmax(0,1fr)_14rem]">
         <DocsSidebar tree={tree} activeSlug={document?.slug} />
 
         <main className="min-w-0 rounded-lg border border-border bg-card/80 px-5 py-6 shadow-sm sm:px-8 lg:px-10">
