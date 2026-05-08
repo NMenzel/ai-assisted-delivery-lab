@@ -25,7 +25,7 @@ import {
 
 export default function Home() {
   return (
-    <main id="main-content">
+    <div>
       <section className="border-b border-border bg-card/40">
         <Container className="grid gap-10 py-16 lg:grid-cols-[1.25fr_0.75fr] lg:items-center lg:py-20">
           <div className="space-y-7">
@@ -186,6 +186,6 @@ export default function Home() {
           </div>
         </section>
       </Container>
-    </main>
+    </div>
   );
 }

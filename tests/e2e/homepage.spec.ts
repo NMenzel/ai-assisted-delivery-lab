@@ -14,7 +14,12 @@ test("homepage loads and shows the main heading", async ({ page }) => {
 test("primary navigation reaches the prompt library", async ({ page }) => {
   await page.goto("/");
 
-  await page.getByRole("link", { name: "Prompt Library" }).first().click();
+  await expect(
+    page.getByRole("navigation", { name: "Primary navigation" }),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: "Prompt Library" }).click();
+  await page.getByRole("link", { name: "All Prompts" }).click();
 
   await expect(
     page.getByRole("heading", {

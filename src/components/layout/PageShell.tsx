@@ -23,7 +23,7 @@ export function PageShell({
   cta,
 }: PageShellProps) {
   return (
-    <main id="main-content">
+    <div>
       <Container className="py-14 sm:py-18">
         <div className="max-w-4xl space-y-5">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
@@ -43,6 +43,6 @@ export function PageShell({
         </div>
         <div className="mt-12">{children}</div>
       </Container>
-    </main>
+    </div>
   );
 }

@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 
-import { SiteFooter, SiteHeader } from "@/components/layout";
+import { AppSidebar } from "@/components/app-sidebar";
+import { Separator } from "@/components/ui/separator";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
 import type { AppChildren } from "@/types";
 
 const geistSans = Geist({
@@ -38,9 +44,24 @@ export default function RootLayout({ children }: AppChildren) {
         >
           Skip to content
         </a>
-        <SiteHeader />
-        {children}
-        <SiteFooter />
+        <SidebarProvider>
+          <AppSidebar />
+          <SidebarInset id="main-content">
+            <header className="sticky top-0 z-30 flex h-14 shrink-0 items-center gap-2 border-b border-border bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
+              <div className="flex items-center gap-2 px-4">
+                <SidebarTrigger className="-ml-1" />
+                <Separator
+                  orientation="vertical"
+                  className="mr-2 data-[orientation=vertical]:h-4"
+                />
+                <p className="text-sm font-medium text-muted-foreground">
+                  AI-assisted delivery operating system
+                </p>
+              </div>
+            </header>
+            {children}
+          </SidebarInset>
+        </SidebarProvider>
       </body>
     </html>
   );
