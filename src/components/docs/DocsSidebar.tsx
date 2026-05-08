@@ -128,7 +128,7 @@ function SidebarContent({
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Search docs"
-          className="pl-9"
+          className="pl-9 [&::-webkit-search-cancel-button]:cursor-pointer"
           type="search"
         />
       </label>
