@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { BookOpen, Folder, Search } from "lucide-react";
+import { BookOpen, Folder, Search, X } from "lucide-react";
 
 import type {
   KnowledgeDocumentSummary,
@@ -139,9 +139,19 @@ function SidebarContent({
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search docs"
-            className="pl-9 [&::-webkit-search-cancel-button]:cursor-pointer"
+            className="w-full min-w-0 pl-9 pr-9 [&::-webkit-search-cancel-button]:appearance-none"
             type="search"
           />
+          {query ? (
+            <button
+              type="button"
+              aria-label="Clear document search"
+              onClick={() => setQuery("")}
+              className="absolute right-2 top-1/2 inline-flex size-6 -translate-y-1/2 cursor-pointer items-center justify-center rounded-sm text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              <X className="size-4" aria-hidden="true" />
+            </button>
+          ) : null}
         </label>
       </div>
 
