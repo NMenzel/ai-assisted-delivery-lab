@@ -14,7 +14,7 @@ import {
   Route,
   ScanEye,
   ShieldCheck,
-  Sparkles,
+  Ship,
   TextSelect,
 } from "lucide-react";
 
@@ -214,7 +214,7 @@ export function AppSidebar({ starredDocs = [], ...props }: AppSidebarProps) {
             >
               <Link href="/">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Sparkles className="size-4" aria-hidden="true" />
+                  <Ship className="size-5" aria-hidden="true" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">
