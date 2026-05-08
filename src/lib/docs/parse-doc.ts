@@ -57,6 +57,10 @@ function titleFromContent(content: string, fallback: string) {
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
+function removeLeadingH1(content: string) {
+  return content.replace(/^#\s+.+(?:\r?\n)+/, "").trim();
+}
+
 export function parseKnowledgeDocument(
   raw: string,
   relativePath: string,
@@ -73,6 +77,7 @@ export function parseKnowledgeDocument(
   const status =
     enumValue(DOCUMENT_STATUSES, data.status) ??
     stringFromUnknown(data.status);
+  const content = removeLeadingH1(parsed.content);
 
   return {
     id,
@@ -99,7 +104,7 @@ export function parseKnowledgeDocument(
     slugSegments: slug.split("/"),
     path: `/knowledge/${slug}`,
     relativePath: relativePath.replaceAll(path.sep, "/"),
-    content: parsed.content.trim(),
-    toc: getTableOfContents(parsed.content),
+    content,
+    toc: getTableOfContents(content),
   };
 }

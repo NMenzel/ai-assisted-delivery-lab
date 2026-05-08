@@ -42,7 +42,7 @@ export function DocsLayout({
               <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
                 Browse Markdown files that already exist under the repository
                 docs directory. The viewer discovers content, metadata, and
-                local media references without providing any editing or upload
+                local media references without providing any write-capable
                 controls.
               </p>
               {documents[0] ? (
