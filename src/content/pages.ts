@@ -196,7 +196,10 @@ export const labPages: LabPage[] = [
         ],
       },
     ],
-    cta: { label: "Read responsible AI policy", href: "/responsible-ai-policy" },
+    cta: {
+      label: "Read responsible AI policy",
+      href: "/responsible-ai-policy",
+    },
   },
   {
     slug: "token-optimization",
@@ -226,7 +229,10 @@ export const labPages: LabPage[] = [
         body: "Compression improves cost and speed, but it can remove nuance, constraints, and review evidence. Use compression only when risk is low and human review remains in place.",
       },
     ],
-    cta: { label: "View token-optimized prompts", href: "/prompt-library/token-optimized" },
+    cta: {
+      label: "View token-optimized prompts",
+      href: "/prompt-library/token-optimized",
+    },
   },
   {
     slug: "evaluation",
@@ -260,7 +266,10 @@ export const labPages: LabPage[] = [
         body: "Run benchmark tasks, score outputs, record hallucinations and corrections, revise prompts, and update examples.",
       },
     ],
-    cta: { label: "View example workflow", href: "/examples/accessible-component-delivery" },
+    cta: {
+      label: "View example workflow",
+      href: "/examples/accessible-component-delivery",
+    },
   },
   {
     slug: "accessibility-workflow",
@@ -294,7 +303,10 @@ export const labPages: LabPage[] = [
         ],
       },
     ],
-    cta: { label: "Read accessible delivery example", href: "/examples/accessible-component-delivery" },
+    cta: {
+      label: "Read accessible delivery example",
+      href: "/examples/accessible-component-delivery",
+    },
   },
 ];
 

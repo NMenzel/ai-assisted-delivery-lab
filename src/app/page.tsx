@@ -44,9 +44,9 @@ export default function Home() {
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-muted-foreground">
                 Explore responsible AI usage policies, prompt-library
-                governance, PR review checklists, context engineering
-                templates, security guardrails, token-optimization patterns,
-                and evaluation methods for modern engineering teams.
+                governance, PR review checklists, context engineering templates,
+                security guardrails, token-optimization patterns, and evaluation
+                methods for modern engineering teams.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -65,7 +65,10 @@ export default function Home() {
           <Card className="border-primary/20 bg-background/80">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <ShieldCheck className="size-5 text-primary" aria-hidden="true" />
+                <ShieldCheck
+                  className="size-5 text-primary"
+                  aria-hidden="true"
+                />
                 Operating principle
               </CardTitle>
               <CardDescription>
@@ -145,7 +148,10 @@ export default function Home() {
 
         <Separator className="my-14" />
 
-        <section aria-labelledby="quality-gates" className="grid gap-8 lg:grid-cols-2">
+        <section
+          aria-labelledby="quality-gates"
+          className="grid gap-8 lg:grid-cols-2"
+        >
           <div className="space-y-4">
             <SectionHeading
               id="quality-gates"
